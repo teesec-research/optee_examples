@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "Copy and edit this script first!"
+exit 1
+
+cp hello_world/ dumpmem -r
+cd dumpmem/
+grep -Iir . -e HELLO -l | xargs sed -i 's/HELLO_WORLD/DUMPMEM/g' 
+grep -Iir . -e HELLO -l | xargs sed -i 's/hello_world/dumpmem/g' 
+grep -Iir . -e HELLO -l | xargs sed -i 's/hello world/dumpmem/g' 
+grep -Iir . -e HELLO -l | xargs sed -i 's/Hello World/Dumpmem/g' 
+grep -Iir . -e HELLO -l | xargs sed -i 's/hello-world/dumpmem/g' 
+uuidgen
+grep -Iir . -e UUID -l | xargs sed -i 's/8aaaf200/4a8aa995/g' 
+grep -Iir . -e UUID -l | xargs sed -i 's/2450/90f8/g' 
+grep -Iir . -e UUID -l | xargs sed -i 's/11e4/4106/g' 
+grep -Iir . -e UUID -l | xargs sed -i 's/abe2/880e/g' 
+grep -Iir . -e UUID -l | xargs sed -i 's/0002a5d5c51b/8a51a7136585/g' 
+echo "YOU STILL NEED TO EDIT THE ..._ta.h FILE AND ENTER THE LAST PART OF THE NEW UUID!"
+find . | xargs rename s/hello_world/dumpmem/g

@@ -24,7 +24,6 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
 #include <tee_internal_api.h>
 #include <tee_internal_api_extensions.h>
 
@@ -37,7 +36,12 @@
 TEE_Result TA_CreateEntryPoint(void)
 {
 	DMSG("has been called");
-
+	void* ptrs[2] = {0x1020304050607080,0x0102030405060708};
+    //size_t buffersize=0x8000000000000000,headersize=16;
+    //signed long long result;
+    //DMSG("overflow detected (0=no,1=yes): %i\n",(int)__INTOF_ADD(buffersize,headersize,&result));
+    //DMSG("resulting size: %lli\n",(signed long long)result);
+	DMSG("pointer value: %p", (void*)*((void**)(((char*)ptrs)+1)));
 	return TEE_SUCCESS;
 }
 

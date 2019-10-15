@@ -1,0 +1,31 @@
+
+#ifndef TA_RUNMEM_H
+#define TA_RUNMEM_H
+
+/**/
+// real
+#define TA_RUNMEM_UUID \
+	{ 0x2ddefbb6, 0xc357, 0x4f36, \
+		{ 0xab,0x16,0x2b,0x2a,0x75,0xad,0xd7,0x7e } }
+/** /	
+// fake
+#define TA_RUNMEM_UUID \
+	{ 0x4a8aa995, 0x90f8, 0x4106, \
+		{ 0x88,0x0e,0x8a,0x51,0xa7,0x13,0x65,0x85} }
+/**/
+
+#define TA_RUNMEM_CMD_FAULT        1
+#define TA_RUNMEM_CMD_RUNMEM_STACK		10
+#define TA_RUNMEM_CMD_RUNMEM_HEAP		11
+#define TA_RUNMEM_CMD_RUNMEM_BSS		12
+#define TA_RUNMEM_CMD_RUNMEM_DATA		13
+#define TA_RUNMEM_CMD_RUNMEM_TEXT		14
+#define TA_RUNMEM_CMD_RUNMEM_TEXT2		15
+#define TA_RUNMEM_CMD_RUNMEM_HEAP_REMAP 16
+#define TA_RUNMEM_CMD_PRINTF 17
+#define TA_RUNMEM_CMD_TEST_HEAP 18
+#define TA_RUNMEM_CMD_RUNMEM_SHARED_INPUT		19
+#define TA_RUNMEM_CMD_RUNMEM_SHARED_OUTPUT		20
+#define TA_RUNMEM_CMD_OVERRUN		21
+
+#endif /*TA_RUNMEM_H*/
